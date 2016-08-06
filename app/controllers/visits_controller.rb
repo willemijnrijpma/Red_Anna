@@ -7,6 +7,10 @@ class VisitsController < ApplicationController
     @visits = Visit.all
   end
 
+  def new
+      @visit = Visit.new
+    end
+
   # GET /visits/1
   # GET /visits/1.json
   def show

@@ -1,22 +1,11 @@
-<%= form_for(visit) do |f| %>
-  <% if visit.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(visit.errors.count, "error") %> prohibited this visit from being saved:</h2>
+<%= form_for @visit do |f| %>
 
-      <ul>
-      <% visit.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+    <%= f.label :threat %>
+    <%= f.number_field :threat %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
+    <%= f.label :advice %>
+    <%= f.number_field :advice %>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <%= f.submit (@visit.new_record? ? "Create" : "Update") %>
+
 <% end %>
