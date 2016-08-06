@@ -1,10 +1,13 @@
 <%= form_for @visit do |f| %>
-
+    <pre><%= @visit.errors.to_json %></pre>
     <%= f.label :threat %>
-    <%= f.number_field :threat %>
+    <%= f.select :threat, [['Yes', true], ['No', false]] %>
 
     <%= f.label :advice %>
-    <%= f.number_field :advice %>
+    <%= f.select :advice, [['Yes', true], ['No', false]] %>
+
+    <%= f.label :hr %>
+    <%= f.select :hr_id, Hr.select_options %>
 
     <%= f.submit (@visit.new_record? ? "Create" : "Update") %>
 
