@@ -14,6 +14,7 @@ class VisitsController < ApplicationController
   # GET /visits/1
   # GET /visits/1.json
   def show
+    @visit = Visit.find(params[:id])
   end
 
   # GET /visits/new
