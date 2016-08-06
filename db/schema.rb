@@ -10,15 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160806084818) do
+ActiveRecord::Schema.define(version: 20160806095653) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "visits", force: :cascade do |t|
+  create_table "hrs", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "picture_url"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
+  create_table "visits", force: :cascade do |t|
+    t.boolean  "threat"
+    t.boolean  "advice"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "hr_id"
+    t.index ["hr_id"], name: "index_visits_on_hr_id", using: :btree
+  end
+
+  add_foreign_key "visits", "hrs"
 end
