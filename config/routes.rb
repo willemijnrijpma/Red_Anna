@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+ # config/routes.rb
   root "visits#index"
 
   resources :visits
