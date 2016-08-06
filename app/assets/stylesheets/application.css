@@ -1,3 +1,89 @@
+
+a {
+  padding-bottom:
+  position: fixed;
+  font-size: 18pt;
+  color: black;
+  font-weight: bolder;
+}
+
+footer {
+  position: fixed;
+  text-align: center;
+  height: 5vh;
+  width: 100vw;
+  background: rgb(106, 216, 69);
+  bottom: 0;
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+h1 {
+  margin-bottom: 5;
+  font-size: 100pt;
+}
+.background_firstpage {
+  background: http://images.nrc.nl/n5d2SlTW6LQvZSA-E0SnnH24DrU=/1280x/s3/static.nrc.nl/breedbeeld/files/2012/06/540x305.jpg;
+  text-align: center;
+  font-family: Parisienne;
+
+}
+h2{
+  position: relative;
+  margin-top: 0;
+  text-align: center;
+  height: 450px;
+  width: 98vw;
+  display: block;
+
+
+}
+ul {
+  font-size: 18pt;
+  font-weight: bolder;
+}
+
+.logo {
+  position: absolute;
+  right:100px;
+  top: 0px;
+
+  width: 60px;
+}
+.opening-image {
+  width: 400px;
+}
+.button-firstpage {
+  position: relative;
+  width: 50px;
+  bottom: 15px
+}
+.header-p2 {
+  font-size: 40pt;
+}
+.background_secondpage {
+  background: #AE0514;
+  text-align: center;
+  font-family: Parisienne;
+}
+.dish-image {
+  height: 200px;
+}
+ul {
+  list-style-type: none;
+  font-size: 20pt;
+  font-weight: bolder;
+}
+.background_secondpage ul {
+  color: green;
+}
+
+body {
+  background-image: url('http://images.nrc.nl/n5d2SlTW6LQvZSA-E0SnnH24DrU=/1280x/s3/static.nrc.nl/breedbeeld/files/2012/06/540x305.jpg');
+  color: #fff;
+}
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
