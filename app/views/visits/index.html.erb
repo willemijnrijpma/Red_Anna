@@ -19,7 +19,7 @@
 
   <tbody>
     <% @visits.each do |visit| %>
-    <p><%= link_to visit.name, visit_path(visit.id) %></p>
+    <p><%= link_to visit.threat, visit_path(visit.id) %></p>
       <tr>
         <td><%= visit.threat %></td>
         <td><%= link_to 'Show', visit %></td>

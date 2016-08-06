@@ -7,9 +7,6 @@ class VisitsController < ApplicationController
     @visits = Visit.all
   end
 
-  def new
-      @visit = Visit.new
-    end
 
   # GET /visits/1
   # GET /visits/1.json
@@ -28,19 +25,18 @@ class VisitsController < ApplicationController
 
   # POST /visits
   # POST /visits.json
-  def create
-    @visit = Visit.new(visit_params)
 
-    respond_to do |format|
-      if @visit.save
-        format.html { redirect_to @visit, notice: 'Visit was successfully created.' }
-        format.json { render :show, status: :created, location: @visit }
-      else
-        format.html { render :new }
-        format.json { render json: @visit.errors, status: :unprocessable_entity }
-      end
-    end
+  def create
+     @visit = Visit.new( visit_params )
+
+     if @visit.save
+        redirect_to @visit
+     else
+        render 'new'
+     end
   end
+
+
 
   # PATCH/PUT /visits/1
   # PATCH/PUT /visits/1.json
@@ -74,6 +70,6 @@ class VisitsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def visit_params
-      params.require(:visit).permit(:name)
+      params.require(:visit).permit(:threat, :advice, :hr_id)
     end
-end
+  end
